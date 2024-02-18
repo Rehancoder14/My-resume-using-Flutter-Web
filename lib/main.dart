@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterwebintern/views/myhome.dart';
-import 'package:flutterwebintern/views/newcheck.dart';
 
 void main() {
   runApp(const MyApp());

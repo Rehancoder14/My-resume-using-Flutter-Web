@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class NewCheck extends StatefulWidget {
@@ -17,9 +14,12 @@ class _NewCheckState extends State<NewCheck> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/peak.jpg'), fit: BoxFit.cover)),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/peak.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }

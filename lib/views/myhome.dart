@@ -21,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
-      body: Container(
+      body: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Row(
@@ -219,22 +219,30 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              headTitle(deviceHeight, deviceWidth, "Binary Dots",
-                  "Oct 2022 - Jan 2023"),
+              headTitle(
+                deviceHeight,
+                deviceWidth,
+                "Binary Dots",
+                "Oct 2022 - March 2023",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              headTitle(
+                deviceHeight,
+                deviceWidth,
+                'Hutri distribution pvt ltd (Freelance)',
+                'Jan 2023 - March 2023',
+              ),
               SizedBox(
                 height: 10,
               ),
               headTitle(
                 deviceHeight,
                 deviceWidth,
-                'Binary Dots',
-                'Jan 2023 - March 2023',
+                'Desktivo Tech',
+                'April 2023 - Present',
               ),
-              SizedBox(
-                height: 10,
-              ),
-              headTitle(deviceHeight, deviceWidth, 'Hutri distribution pvt ltd',
-                  'Jan 2023 - March 2023'),
               SizedBox(
                 height: 10,
               ),
@@ -290,7 +298,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget skillsData(var deviceHeight, var deviceWidth) {
     return Container(
-      height: deviceHeight * 1.07,
+      height: deviceHeight * 1.1,
       width: deviceWidth * 0.5,
       padding:
           EdgeInsets.only(top: deviceHeight * 0.02, left: deviceWidth * 0.01),
@@ -306,7 +314,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
               height: deviceHeight,
               width: deviceWidth,
-              padding: EdgeInsets.only(top: deviceHeight * 0.04),
+              padding: EdgeInsets.only(top: deviceHeight * 0.07),
               child: GridView.builder(
                   padding: const EdgeInsets.only(bottom: 0),
                   shrinkWrap: true,
@@ -338,16 +346,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Icon(icon),
-            Text(
-              title,
-              style: TextStyle(fontSize: deviceHeight * 0.03),
-            )
-          ],
+        Text(
+          title,
+          style: TextStyle(fontSize: deviceHeight * 0.03),
         ),
-        Text(" $description",
+        Text("$description",
             style: TextStyle(
                 fontSize: deviceHeight * 0.025, color: Colors.black54))
       ],
